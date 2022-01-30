@@ -1,5 +1,5 @@
-export default function counter(options){
-	let counterText = document.querySelector('.counter')
+export default function counter(options, id){
+	let counterText = document.getElementById("counter"+id)
 	let counter = 0;
 	options.forEach((option, index)=>{
 		if(option.classList.contains("selected") && index !== 0){

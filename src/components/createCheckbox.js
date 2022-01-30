@@ -1,6 +1,6 @@
 import counter from "./counter.js";
 
-export default function createCheckbox(checkboxesParent, options) {
+export default function createCheckbox(checkboxesParent, options, id) {
   for (let i = 0; i < options.length; i++) {
     checkboxesParent.insertAdjacentHTML(
       "beforeend",
@@ -9,20 +9,20 @@ export default function createCheckbox(checkboxesParent, options) {
 		  `
     );
   }
-  let inputs = document.querySelectorAll(".check");
+  let inputs = checkboxesParent.querySelectorAll(".check");
   checkboxesParent.addEventListener("change", (e) => {
     if (e.target === inputs[0]) {
       options.forEach((option, index) => {
         option.classList.add("selected");
         inputs[index].checked = true;
-        counter(options);
+        counter(options, id);
       });
     } else if (e.target.tagName === "INPUT" || e.target.tagName === "LABEL") {
       options.forEach((option) => {
         if (option.value === e.target.id) {
           option.selected = e.target.checked;
           option.classList.toggle("selected");
-          counter(options);
+          counter(options, id);
           for (let i = 0; i < options.length; i++) {
             if (options[i].classList.contains("selected")) {
               options[0].classList.remove("selected");
