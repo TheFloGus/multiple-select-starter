@@ -4,6 +4,7 @@ export default function clearAll(options, clearAllBtn, checkboxes) {
       option.selected = false;
       option.classList.remove("selected");
       checkboxes[index].checked = false;
+	  document.querySelector('.counter').innerHTML = "Выбрано"
     })
   );
 }

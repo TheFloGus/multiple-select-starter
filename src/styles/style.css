@@ -13,6 +13,23 @@ body {
   padding: 10px 50px;
 }
 
+
+.header{
+	margin: 11px 0;
+	padding: 18px 0;
+}
+
+.header__title{
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}
+
+.counter{
+	margin-left: 13px;
+	color: #0000009c
+}
+
 .list-container {
   display: flex;
   width: 50%;
@@ -33,6 +50,7 @@ body {
 .option {
   padding: 10px;
   font-size: 14px;
+  cursor: pointer;
 }
 
 option:checked {
@@ -64,6 +82,7 @@ option:checked {
   border-radius: 4px;
   margin-bottom: 17px;
   transition: all 0.1s linear;
+  cursor: pointer;
 }
 
 .checkbox:before{
@@ -80,4 +99,10 @@ option:checked {
 	transform: rotate(45deg);
 	
 
+}
+
+.clear-all{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
