@@ -27,7 +27,6 @@ export default function createCheckbox(checkboxesParent, options) {
             if (options[i].classList.contains("selected")) {
               options[0].classList.remove("selected");
               inputs[0].checked = false;
-              console.log("nice");
             }
           }
         }
